@@ -102,8 +102,13 @@ span#logo {
 }
 
 .gradient-btn:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    background-color: var(--main-color);
+      
 }
+/* .gradient-btn:hover {
+    background-color: var(--bg-color2);
+  } */
 
 #home {
     padding: 10rem 15%;
@@ -703,4 +708,3 @@ h1, h2, h3, h4 {
       display: none;
     }
   }
-  
