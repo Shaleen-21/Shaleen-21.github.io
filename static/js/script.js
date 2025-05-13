@@ -47,21 +47,31 @@ function clearWord() {
 
 typingAnimation()
 
+const form = document.querySelector("#contact_form");
+form.addEventListener("submit", (e) => sendWhatsAppMessage(e))
 
-  function sendWhatsAppMessage() {
+  function sendWhatsAppMessage(e) {
+    e.preventDefault();
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
     if (name === "" || email === "" || message === "") {
-      alert("Please fill in both fields.");
+      alert("Please fill in all fields.");
       return;
     }
 
-    const phoneNumber = "0782825818"; // 🔁 Replace with your WhatsApp number (no '+' or spaces)
-    const encodedMessage = encodeURIComponent(`Hello, my name is ${name}. ${message}`);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const phoneNumber = "+263782825818"; // 🔁 Replace with your WhatsApp number (no '+' or spaces)
+    // const encodedMessage = encodeURIComponent(`Hello, my name is ${name}. ${message}`);
+    const fullMessage = `Hello, my name is ${name}. ${message}`
+    let msg = `New message from: ${name} \n`
+    msg += `Email: ${email} \n`
+    msg += `Mesage: ${message}`
+    const whatsappURL = `https://wa.me/${phoneNumber}?text='${msg}'`;
 
+    console.log(msg);
+    
     window.open(whatsappURL, "_blank");
+    // window.location.href = whatsappURL;
   }
 

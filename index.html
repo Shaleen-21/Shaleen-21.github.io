@@ -269,11 +269,16 @@
             <div class="contact-container">
               <h1>Contact Me</h1>
               <p>If you do like to work together, feel free to reach out!</p>
-              <form class="contact-form" action="mailto:pennyshaleenbeauty@gmail.com" method="POST" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button onclick="sendWhatsAppMessage()">Send Message</button>
+              <!-- <form class="contact-form" action="mailto:pennyshaleenbeauty@gmail.com" method="POST" enctype="text/plain"> -->
+              <form 
+                class="contact-form"
+                id="contact_form"
+                enctype="text/plain">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <!-- <button onclick="sendWhatsAppMessage()">Send Message</button> -->
+                <button type="submit">Send Message</button>
               </form>
             </div>
                 
