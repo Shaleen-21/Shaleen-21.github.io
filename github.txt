@@ -1,0 +1,5 @@
+# 1. commit changes
+git commit -m "message"
+
+# 2. push changes
+git push

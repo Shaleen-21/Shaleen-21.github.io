@@ -46,3 +46,22 @@ function clearWord() {
 }
 
 typingAnimation()
+
+
+  function sendWhatsAppMessage() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill in both fields.");
+      return;
+    }
+
+    const phoneNumber = "0782825818"; // 🔁 Replace with your WhatsApp number (no '+' or spaces)
+    const encodedMessage = encodeURIComponent(`Hello, my name is ${name}. ${message}`);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+  }
+
