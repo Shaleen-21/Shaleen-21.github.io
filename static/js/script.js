@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => sendWhatsAppMessage(e))
 
     console.log(msg);
     
-    window.open(whatsappURL, "_blank");
-    // window.location.href = whatsappURL;
+    // window.open(whatsappURL, "_blank");
+    window.location.href = whatsappURL;
   }
 
