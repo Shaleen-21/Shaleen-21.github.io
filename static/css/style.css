@@ -23,6 +23,8 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    padding: 0;
+    margin: 0;
 
 }
 
@@ -714,4 +716,96 @@ h1, h2, h3, h4 {
 	padding:14px;
 	text-align:center;
 	background-color: var(--secondary-bg-color);
+}
+
+.mobile_navbar  {
+    display: none;
+}
+
+@media screen and (max-width: 799px){
+
+    .header {
+        padding: 2em 0;
+        justify-content: space-around !important;
+        flex-wrap: wrap;
+    }
+    section {
+        height: auto !important;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile_navbar {
+        width: 100%;
+        /* display: flex; */
+        flex-direction: column;
+        background-color: white;
+        margin: 1rem;
+    }
+    .mobile_navbar a{
+        padding: 0.8em;
+        font-size: 1rem;
+    }
+
+    .mobile_navbar a.active {
+        color:var(--main-color);
+    }
+
+    .mobile_navbar a:hover {
+        /* background-color: var(--main-color); */
+    }
+    #humburger_menu{
+        font-size: 1.3rem;
+        border: none;
+        background-color: transparent;
+    }
+
+    #home {
+        padding: 10em 5%;
+        padding-top: 6em;
+        padding-bottom: 1em;
+    }
+    #profession{
+        font-size: 1em;
+    }
+    .aboutt{
+        height: auto;
+        /* padding: 0 1em; */
+        width: 80%;
+        margin-bottom: 2em;
+
+    }
+    .aboutt h3{
+        width: 100%;
+    }
+
+    #humburger_menu {
+        display: flex;
+    }
+
+    .gradient-btn {
+        padding: .5em 2em;
+    }
+    #skills{
+        padding: 1em 1em;
+    }
+    #skil{
+        padding: 0;
+    }
+    .techS, .profS{
+        width: 50%;
+    }
+    #projects{
+        padding: 1em;
+        height: auto;
+    }
+    .projects-container{
+        height: auto;
+    }
+    .experience-container{
+        padding: ;
+    }
+
 }

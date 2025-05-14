@@ -75,3 +75,41 @@ form.addEventListener("submit", (e) => sendWhatsAppMessage(e))
     window.location.href = whatsappURL;
   }
 
+const allLinks = document.querySelectorAll(".link");
+allLinks.forEach(link => {
+    link.addEventListener("click", e => {
+        // remove the active class from all links
+        removeactivelinks()
+
+        // add the active class to the clicked link
+        link.classList.add("active")
+    })
+})
+
+function removeactivelinks(){
+    allLinks.forEach(link => {
+        link.classList.remove("active")
+    })
+}
+
+const mobile_navbar = document.getElementById("mobile_navbar")
+
+const humburger_menu = document.getElementById("humburger_menu");
+humburger_menu.addEventListener("click", () => {
+    console.log("button clickrd");
+    
+    if(mobile_navbar.classList.contains("flex")){
+        mobile_navbar.classList.remove("flex")
+        mobile_navbar.classList.add("none")
+        console.log("flex removed");
+        
+
+    } else{
+        mobile_navbar.classList.add("flex")
+        mobile_navbar.classList.remove("none")
+        console.log("flex added");
+        
+    }
+
+
+})
