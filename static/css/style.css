@@ -45,7 +45,7 @@ body {
 }
 
 section {
-    width: 100%;
+    width: auto;
 }
 
 #menu-icon {
@@ -114,9 +114,10 @@ span#logo {
   } */
 
 #home {
-    padding: 10rem 15%;
+    padding: 9rem 10%;
+    padding-bottom: 1em;
     display: flex;
-    height: 120vh;
+    height: auto;
 
     h2 {
         color: purple;
@@ -204,13 +205,15 @@ span#logo {
     justify-content: center; */
 
 }
-
+.about{
+    
+}
 .aboutt {
     background-color: white;
     backdrop-filter: blur(100px);
     height: 50vh;
-    /* padding-top: 20px; */
-    padding: 2em;
+    padding-top: 20px;
+    /* padding: 2em; */
     background-color: var(--bg-color);
     /* color: white; */
     width: 60%;
@@ -407,6 +410,8 @@ h1, h2, h3, h4 {
         opacity: 1;
     }
 }
+
+
 .radial-bars{
     width: 100%;
     display: flex;
@@ -440,7 +445,7 @@ h1, h2, h3, h4 {
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
     stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
+    animation: animate-bar 1s ease forwards;
 }
 @keyframes animate-bar{
     100%{
@@ -455,30 +460,36 @@ h1, h2, h3, h4 {
     stroke-dashoffset: 502;
     stroke-linecap: round;
 }
-.path-1{animation: animate-path1 1s 1s linear forwards;}
+
+
+.path-1 {
+    animation: animate-path1 1s ease forwards;
+  }
+  
+/* .path-1{animation: animate-path1 1s 1s linear forwards;} */
 .path-2{animation: animate-path2 1s 1s linear forwards;}
 .path-3{animation: animate-path3 1s 1s linear forwards;}
 .path-4{animation: animate-path4 1s 1s linear forwards;}
 
 @keyframes animate-path1{
     100%{
-        stroke-dashoffset:120;;
+        stroke-dashoffset:20;;
     }
 }
 
 @keyframes animate-path2{
     100%{
-        stroke-dashoffset: 130;;
+        stroke-dashoffset: 18;;
     }
 }
 @keyframes animate-path3{
     100%{
-        stroke-dashoffset: 75;;
+        stroke-dashoffset: 80;
     }
 }
 @keyframes animate-path4{
     100%{
-        stroke-dashoffset: 130;;
+        stroke-dashoffset: 15;;
     }
 }
 .radial-bar .percentage{
@@ -889,7 +900,7 @@ h1, h2, h3, h4 {
 .logo{
     font-size: 1.4em;
     margin-right: 3em;
-    
+
 }
 .gradient-btn{
     display: none;
@@ -912,3 +923,79 @@ h1, h2, h3, h4 {
     padding: 60px 20px;
 }
 }
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: var(--white-color);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    color: var(--white-color);
+}
+
+.radial-bars{
+    display: flex;
+}
+.radial-bar {
+    position: relative;
+    /* display: flex; */
+    width: 50%;
+    height: 150px;
+    /* margin: 20px; */
+  }
+  
+  .radial-bar svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* Makes 0% start at top */
+  }
+  
+  .progress-bar {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-width: 20;
+    opacity: 0.3; /* lighter orange background */
+  }
+  
+  .path {
+    fill: none;
+    stroke: purple;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 502; /* Circumference of circle (2πr where r = 80) */
+    stroke-dashoffset: 502;
+    transition: stroke-dashoffset 1s ease;
+  }
+  
+  .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 24px;
+    color: purple;
+  }
+  
+  .text {
+    text-align: center;
+    margin-top: 10px;
+  }
+  

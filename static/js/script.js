@@ -113,3 +113,38 @@ humburger_menu.addEventListener("click", () => {
 
 
 })
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !phone || !message) {
+      alert("Please fill in all the fields before sending the message.");
+      return;
+    }
+
+    const whatsappNumber = "263782825818"; // Your number WITHOUT "+" and starting with country code
+    const text = `New Contact Message:%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+
+    // Open WhatsApp with pre-filled message
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, "_blank");
+  });
+
+  
+  document.querySelectorAll(".radial-bar").forEach((bar) => {
+    const percentageText = bar.querySelector(".percentage").textContent;
+    const value = parseInt(percentageText);
+    const circle = bar.querySelector(".path");
+
+    // Total stroke length is 2 * π * r = 2 * 3.14 * 80 = ~502
+    const total = 502;
+    const offset = total - (total * value) / 100;
+
+    circle.style.strokeDashoffset = offset;
+  });
+
