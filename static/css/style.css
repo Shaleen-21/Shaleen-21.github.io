@@ -466,30 +466,30 @@ h1, h2, h3, h4 {
     animation: animate-path1 1s ease forwards;
   }
   
-/* .path-1{animation: animate-path1 1s 1s linear forwards;} */
+.path-1{animation: animate-path1 1s 1s linear forwards;}
 .path-2{animation: animate-path2 1s 1s linear forwards;}
 .path-3{animation: animate-path3 1s 1s linear forwards;}
 .path-4{animation: animate-path4 1s 1s linear forwards;}
 
 @keyframes animate-path1{
     100%{
-        stroke-dashoffset:20;;
+        stroke-dashoffset:120;;
     }
 }
 
 @keyframes animate-path2{
     100%{
-        stroke-dashoffset: 18;;
+        stroke-dashoffset: 130;;
     }
 }
 @keyframes animate-path3{
     100%{
-        stroke-dashoffset: 80;
+        stroke-dashoffset: 75;
     }
 }
 @keyframes animate-path4{
     100%{
-        stroke-dashoffset: 15;;
+        stroke-dashoffset: 130;;
     }
 }
 .radial-bar .percentage{
