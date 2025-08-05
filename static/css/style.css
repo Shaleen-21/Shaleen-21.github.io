@@ -473,23 +473,23 @@ h1, h2, h3, h4 {
 
 @keyframes animate-path1{
     100%{
-        stroke-dashoffset:120;;
+        stroke-dashoffset:85;;
     }
 }
 
 @keyframes animate-path2{
     100%{
-        stroke-dashoffset: 130;;
+        stroke-dashoffset: 70;;
     }
 }
 @keyframes animate-path3{
     100%{
-        stroke-dashoffset: 75;
+        stroke-dashoffset: 65;
     }
 }
 @keyframes animate-path4{
     100%{
-        stroke-dashoffset: 130;;
+        stroke-dashoffset: 75;;
     }
 }
 .radial-bar .percentage{
