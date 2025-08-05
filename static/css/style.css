@@ -445,7 +445,7 @@ h1, h2, h3, h4 {
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
     stroke-linecap: round;
-    animation: animate-bar 1s ease forwards;
+    animation: animate-bar 1s linear forwards;
 }
 @keyframes animate-bar{
     100%{
@@ -462,9 +462,9 @@ h1, h2, h3, h4 {
 }
 
 
-.path-1 {
+/* .path-1 {
     animation: animate-path1 1s ease forwards;
-  }
+  } */
   
 .path-1{animation: animate-path1 1s 1s linear forwards;}
 .path-2{animation: animate-path2 1s 1s linear forwards;}
@@ -515,7 +515,7 @@ h1, h2, h3, h4 {
     background-color:var(--bg-color);
     /* background-image: url(coding.jpg); */
     width: 100%;
-    height: 140vh;
+    height: 155vh;
     min-height: 100vh;
   }
   
@@ -997,5 +997,97 @@ h1, h2, h3, h4 {
   .text {
     text-align: center;
     margin-top: 10px;
+  }
+  
+
+
+  /* Tablet view (600px - 899px) */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 3em 2em;
+    }
+  
+    .left, .right {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .right img {
+      width: 80%;
+      height: auto;
+    }
+  
+    .techS, .profS {
+      width: 100%;
+    }
+  
+    .radial-bars {
+      justify-content: center;
+    }
+  
+    .timeline-content {
+      padding: 1em;
+    }
+  
+    .aboutt {
+      width: 90%;
+      margin: 10% auto;
+    }
+  }
+  
+  /* Mobile view (< 600px) */
+  @media screen and (max-width: 599px) {
+    .container {
+      flex-direction: column;
+      padding: 2em 1em;
+    }
+  
+    .left, .right {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  
+    .right img {
+      width: 100%;
+      height: auto;
+    }
+  
+    h1, h2, h3, h4 {
+      font-size: 1.2rem;
+    }
+  
+    .gradient-btn {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .contact-form input, .contact-form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .techS, .profS {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .radial-bars {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .timeline-content {
+      padding: 1em;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .flyer-gallery .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
   }
   
